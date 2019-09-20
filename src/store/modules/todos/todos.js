@@ -6,8 +6,8 @@ import * as actions from './actions';
 
 const state = {
   todos: [
-    { id: 1, action: "Skosić trawę", active: true },
-    { id: 2, action: "Buty - Lidia", active: true },
+    { id: 1, action: "Przeczytac książkę", active: true },
+    { id: 2, action: "Naprawić kosiarkę", active: true },
     { id: 3, action: "Kino - Sobota", active: true }
   ],
 

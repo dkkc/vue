@@ -47,24 +47,5 @@ export default {
 .list-container__header {
   margin-bottom: 20px;
 }
-/*.input-label {*/
-/*margin-bottom: 40%;*/
-/* font-size: 22px;*/
-/*color: #2b1970;*/
-/*}*/
-/*.container {*/
-/*  display: flex;*/
-/*  align-content: center;*/
-/*}*/
-/*.list-container {*/
-/*  width: 30vw;*/
-/*  margin: 1% 3%;*/
-/*  padding: 30px;*/
-/*  border: 1px solid #2b1970;*/
-/*  !*border: 1px solid #1C1034;*!*/
-/*  text-align: center;*/
-/*}*/
-/*  .red {*/
-/*    color: #2b1970;*/
-/*  }*/
+
 </style>
