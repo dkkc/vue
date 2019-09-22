@@ -6,12 +6,13 @@ import * as actions from './actions';
 
 const state = {
   todos: [
-    { id: 1, action: "Przeczytac książkę", active: true },
-    { id: 2, action: "Naprawić kosiarkę", active: true },
-    { id: 3, action: "Kino - Sobota", active: true }
+    { id: 1, action: "Przeczytac książkę", active: false },
+    { id: 2, action: "Naprawić kosiarkę", active: false },
+    { id: 3, action: "Kino - Sobota", active: false }
   ],
 
   inputValue: "",
+  isChecked: true
 };
 
 

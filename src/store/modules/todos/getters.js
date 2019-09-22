@@ -10,3 +10,7 @@
 	export const inputValue= state => {
 		return state.inputValue
 	};
+
+	export const isSelected = state => {
+	  return state.isSelected;
+  }

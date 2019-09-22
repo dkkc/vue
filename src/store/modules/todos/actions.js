@@ -1,5 +1,9 @@
-export const deleteSelectedTodo = ({commit},id) => {
-  commit('deleteSelectedTodo' ,id)
+export const deleteTodo = ({commit},id) => {
+  commit('deleteTodo' ,id)
+};
+
+export const changeTodoHandler =({commit} , todo) => {
+  commit('changeTodoHandler' , todo);
 };
 
 export const addTodoInputChangeHandler = ({commit} , value) => {

@@ -4,8 +4,8 @@
       <h1 v-if='getTodoList.length <=0' class="list-container__header red">There is no actions to do ;-)</h1>
       <h1 v-else='getTodoList.length' class="list-container__header">ToDo Actions <span class="todos badge badge-primary badge-pill">{{ getTodoList.length}}</span></h1>
       <label class="input-label">Add ToDo:</label>
-      <input-action :actionName="inputValue" @addTodoInputChangeHandler="addTodoInputChangeHandler"></input-action>
-      <item-view :todos="getTodoList" @deleteTodoAction="deleteSelectedTodo">todo.action</item-view>
+      <input-action :actionName="inputValue" @addTodoInputChangeHandler="addTodoInputChangeHandler"  ></input-action>
+      <item-view :todos="getTodoList" @deleteTodoAction="deleteTodo"  @deleteSelectedTodo="changeTodoHandler">todo.action</item-view>
     </div>
   </div>
 </template>
@@ -19,11 +19,11 @@ import InputAddTodoComponent from "../components/Input/InputAddTodoComponent";
 
 export default {
   methods: {
-    ...mapActions(["deleteSelectedTodo", "addTodoInputChangeHandler",])
+    ...mapActions(["deleteTodo", "addTodoInputChangeHandler",'changeTodoHandler'])
   },
 
   computed: {
-    ...mapGetters(["getTodoList",  "inputValue"])
+    ...mapGetters(["getTodoList",  "inputValue",'isSelected'])
   },
   components: {
     "item-view": Item,

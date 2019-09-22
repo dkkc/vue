@@ -4,7 +4,7 @@
       <li class="list-item list-group-item d-flex justify-content-between align-items-center"
         :key="todo.id" v-for="(todo,index) in todos">
         <label>
-          <input class='done-checked' type="checkbox">
+          <input class='done-checked'  :checked="todo.active" @change="changeTodoHandler(todo)" type="checkbox">
         </label>
         {{todo.action}}
         <button class="span-button badge" @click="deleteTodoAction(index)"><i class="trash far fa-trash-alt"></i></button>
@@ -16,11 +16,21 @@
 
 <script>
 export default {
-  props:['todos'],
+  props:['todos','isSelected'],
+  data() {
+      return {
+          checked: false
+      }
+  },
   methods: {
     deleteTodoAction(id) {
       this.$emit("deleteTodoAction", id);
+    },
+    changeTodoHandler(todo) {
+        this.checked = todo.active;
+        this.$emit('deleteSelectedTodo' ,todo)
     }
+
   }
 };
 </script>
