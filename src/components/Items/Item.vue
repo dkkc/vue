@@ -16,18 +16,13 @@
 
 <script>
 export default {
-  props:['todos','isSelected'],
-  data() {
-      return {
-          checked: false
-      }
-  },
+  props:['todos'],
+
   methods: {
     deleteTodoAction(id) {
       this.$emit("deleteTodoAction", id);
     },
     changeTodoHandler(todo) {
-        this.checked = todo.active;
         this.$emit('deleteSelectedTodo' ,todo)
     }
 
