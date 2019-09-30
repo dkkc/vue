@@ -1,5 +1,5 @@
 import uuid from "uuid";
-import doneTasks  from "../done-tasks/doneTasks";
+import doneTasks  from "../doneTasks/doneTasks";
 
 
 export const deleteTodo = (state , id) => {

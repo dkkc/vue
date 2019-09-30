@@ -6,8 +6,10 @@ const state = {
   doneTasks: []
 };
 
+const namespaced = true;
 
 export default  {
+  namespaced,
   state,
   getters,
   mutations,

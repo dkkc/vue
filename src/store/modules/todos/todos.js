@@ -15,9 +15,10 @@ const state = {
   isChecked: true
 };
 
-
+const namespaced = true;
 
 export default {
+namespaced,
 	state,
 	mutations,
 	actions,
