@@ -1,14 +1,12 @@
 <template>
   <div class="container">
     <div class="list-container">
-      <h1
-        v-if="getTodoList.length <=0"
-        class="list-container__header red"
-      >There is no actions to do ;-)</h1>
-      <h1 v-else class="list-container__header">
+      <h1 v-if="getTodoList.length" class="list-container__header">
         ToDo Actions
         <span class="todos badge badge-primary badge-pill">{{ getTodoList.length}}</span>
       </h1>
+      <h1 v-else="getTodoList.length == 0" class="list-container__header red">No tasks to do</h1>
+
       <label class="input-label">Add ToDo:</label>
       <input-action :actionName="inputValue" @addTodoInputChangeHandler="addTodoInputChangeHandler"></input-action>
       <item-view
@@ -32,10 +30,7 @@ export default {
       "deleteTodo",
       "addTodoInputChangeHandler",
       "changeTodoHandler"
-    ]),
-    deleteTodoItem() {
-      this.$store.dispatch("deleteTodo");
-    }
+    ])
   },
 
   computed: {

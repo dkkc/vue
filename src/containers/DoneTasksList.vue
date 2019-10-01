@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="list-container">
-      <h1 v-if="getDoneTasks.length == 0" class="list-container__header red">No finished tasks</h1>
-      <h1 v-else="getDoneTasks.length" class="list-container__header">
-        Done Tasks
+      <h1 v-if="getDoneTasks.length" class="list-container__header red">Finished tasks</h1>
+      <h1 v-else="getDoneTasks.length == 0" class="list-container__header">
+        No tasks anymore
         <span class="done badge badge-primary badge-pill">{{getDoneTasks.length }}</span>
       </h1>
       <done-task-item :doneTasks="getDoneTasks" @deleteDoneTask="deleteDoneTask"></done-task-item>
